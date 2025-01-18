@@ -1,0 +1,419 @@
+/* Nav.css */
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-ul li {
+  display: inline;
+}
+
+.nav-ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-ul li a:hover {
+  background-color: #575757;
+  color: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Footer.css */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f1f1f1;
+}
+
+/* Home.css */
+.home {
+  height: 100vh;
+  /* Full viewport height */
+  background-color: #f5f5f5;
+  /* Light gray plain background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Center content horizontally */
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: #333;
+  /* Dark gray text */
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.home-text {
+  font-size: 1.5rem;
+  color: #555;
+  /* Medium gray text */
+  margin: 0;
+  line-height: 1.6;
+  max-width: 800px;
+  /* Restrict text width for better readability */
+}
+
+/* SimpleSignup.css */
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-container .form-group {
+  margin-bottom: 15px;
+}
+
+.signup-container .form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.signup-container .form-group input,
+.signup-container .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.signup-container .form-group input:focus,
+.signup-container .form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.signup-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.signup-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for Login Form */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for Login Form */
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.already {
+  cursor: pointer;
+}
+
+/* Form Group Styling */
+.login-container .form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.login-container .form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Inputs */
+.login-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Input Focus Effect */
+.login-container .form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.login-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Button Hover Effect */
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Container styling for the admin login */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the form */
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields styling */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+/* Input focus effect */
+.login-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button styling */
+.login-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* AdminDashboard.css */
+.admin-dashboard {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-dashboard h2 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.admin-dashboard th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.admin-dashboard tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.admin-dashboard tr:hover {
+  background-color: #e8f5e9;
+  cursor: pointer;
+}
+
+.admin-dashboard button {
+  padding: 8px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-dashboard button:hover {
+  background-color: #0b7dda;
+}
+
+.admin-dashboard td:nth-child(4) {
+  font-weight: bold;
+}
+
+.admin-dashboard td:nth-child(4)::before {
+  content: '● ';
+  color: green;
+}
+
+.admin-dashboard td:nth-child(4):contains('Pending')::before {
+  color: red;
+}
+
+/*Student Profile*/
+.profile-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.profile-container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
