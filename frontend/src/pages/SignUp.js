@@ -163,30 +163,72 @@ const SimpleSignup = () => {
       }
     }
   };
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 
-  const handleSendOtp = () => {
-    if (recaptchaRef.current) {
-      recaptchaRef.current.innerHTML = '<div id="recaptcha-container"></div>';
-    }
-    const verifier = new firebase.auth.RecaptchaVerifier(
-      "recaptcha-container",
-      {
-        size: "invisible",
-      }
-    );
+//     try {
+//         const res = await axios.post(
+//             url.student.register,
+//             {
+//                 name: formData.name,
+//                 email: formData.email,
+//                 password: formData.password,
+//                 course: formData.course,
+//                 phone: phoneNumber,
+//             },
+//             {
+//                 headers: {
+//                     "Content-Type": "application/json",
+//                 },
+//             }
+//         );
 
-    firebase
-      .auth()
-      .signInWithPhoneNumber(phoneNumber, verifier)
-      .then((confirmationResult) => {
-        setVerificationId(confirmationResult.verificationId);
-        console.log("otp send");
-      })
-      .catch((error) => {
-        alert("Something went wrong");
-        console.log("getting error", error);
-      });
-  };
+//         console.log(res?.data?.message);
+
+//         succesPopUp(res?.data?.message || "Signup successful. Please verify your email.");
+
+//     } catch (error) {
+//         console.error("Error during signup:", error);
+
+//         if (error.response) {
+//             if (error.response.status === 400) {
+//                 errorPopUp("Email already exists. Please login or use a different email.");
+//             } else if (error.response.status === 500) {
+//                 errorPopUp("Internal server error. Please try again later.");
+//             } else {
+                
+//                 errorPopUp(error.response.data.message || "Something went wrong. Please try again later.");
+//             }
+//         } else {
+//             errorPopUp("Unable to connect to the server. Please check your internet connection.");
+//         }
+//     }
+// };
+
+
+  // const handleSendOtp = () => {
+  //   if (recaptchaRef.current) {
+  //     recaptchaRef.current.innerHTML = '<div id="recaptcha-container"></div>';
+  //   }
+  //   const verifier = new firebase.auth.RecaptchaVerifier(
+  //     "recaptcha-container",
+  //     {
+  //       size: "invisible",
+  //     }
+  //   );
+
+  //   firebase
+  //     .auth()
+  //     .signInWithPhoneNumber(phoneNumber, verifier)
+  //     .then((confirmationResult) => {
+  //       setVerificationId(confirmationResult.verificationId);
+  //       console.log("otp send");
+  //     })
+  //     .catch((error) => {
+  //       alert("Something went wrong");
+  //       console.log("getting error", error);
+  //     });
+  // };
 
   return (
     <div className="signup-container">

@@ -49,14 +49,14 @@ const SimpleLogin = () => {
 
       if (error.response) {
         if (error.response.status === 403) {
-          alert("Your account is pending admin approval.");
+          errorPopUp("Your account is pending admin approval.");
         } else if (error.response.status === 401) {
-          alert("Invalid email or password.");
+          errorPopUp("Invalid email or password.");
         } else {
-          alert("Login failed. Please try again.");
+          errorPopUp("Login failed. Please try again.");
         }
       } else {
-        alert("Server error. Please try again later.");
+        errorPopUp("Server error. Please try again later.");
       }
     }
   };

@@ -1,5 +1,5 @@
 const baseUrl = {
-    devurl: process.env.REACT_APP_API_URL, // Accessing the environment variable directly
+    devurl: process.env.REACT_APP_API_URL, 
 };
 
 console.log('Base URL:', baseUrl.devurl);
@@ -11,20 +11,19 @@ console.log('Student API URL:', studentApiUrl);
 console.log('Admin API URL:', adminApiUrl);
 
 const url = {
-    // 🔹 Student Endpoints
     student: {
         register: `${studentApiUrl}/register`,
         login: `${studentApiUrl}/login`,
         profile: `${studentApiUrl}/profile`,
         deleteProfile: `${studentApiUrl}/delete`,
+        verifyEmail: `${studentApiUrl}/verify-email`,
     },
 
-    // 🔹 Admin Endpoints
     admin: {
         login: `${adminApiUrl}/login`,
-        getAllStudents: `${adminApiUrl}/students`,   // Endpoint to get all students
-        approveStudent: `${adminApiUrl}/approve`,    // Endpoint to approve students
-        deleteStudent: `${adminApiUrl}/delete-student`, // Soft delete student endpoint
+        getAllStudents: `${adminApiUrl}/students`,   
+        approveStudent: `${adminApiUrl}/approve`,    
+        deleteStudent: `${adminApiUrl}/delete-student`, 
     }
 };
 
