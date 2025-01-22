@@ -382,7 +382,20 @@
   border-radius: 5px;
 }
 
+.verify-email {
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
 
+.verify-email h2 {
+  color: #333;
+}
+
+.verify-email p {
+  font-size: 1.2rem;
+  color: #555;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

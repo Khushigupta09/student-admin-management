@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import url from '../utils/appUrls';  
+import url from '../utils/appUrls';
+import { errorPopUp, succesPopUp } from '../utils/Toaster';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -15,8 +16,9 @@ const AdminLogin = () => {
         
       localStorage.setItem('adminToken', res.data.token);
       navigate('/admin/dashboard'); 
+      succesPopUp('Login successful!');
     } catch (error) {
-      alert('Invalid credentials');
+      errorPopUp('Invalid credentials');
     }
   };
 

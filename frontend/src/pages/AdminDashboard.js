@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import url from '../utils/appUrls'; 
+import url from '../utils/appUrls';
+import { succesPopUp, errorPopUp } from '../utils/Toaster';
 
 const AdminDashboard = () => {
   const [students, setStudents] = useState([]);
@@ -21,8 +22,10 @@ const AdminDashboard = () => {
     try {
       await axios.put(`${url.admin.approveStudent}/${id}`); 
       setStudents(students.map(s => s._id === id ? { ...s, isApproved: true } : s));
+      succesPopUp('Student approved successfully');
     } catch (error) {
       console.error('Error approving student:', error);
+      errorPopUp('Failed to approve student');
     }
   };
 
@@ -30,14 +33,12 @@ const AdminDashboard = () => {
     try {
         await axios.put(`${url.admin.deleteStudent}/${id}`);  
         setStudents(students.filter(s => s._id !== id));      
-        alert('Student deleted successfully');
+        succesPopUp('Student deleted successfully');
     } catch (error) {
         console.error('Error deleting student:', error);
-        alert('Failed to delete student');
+        errorPopUp('Failed to delete student');
     }
-};
-
-  
+  };
 
   return (
     <div className="admin-dashboard">

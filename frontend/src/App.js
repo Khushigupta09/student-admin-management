@@ -11,6 +11,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import StudentPrivateRoute from "./components/StudentPrivateRoute";
 import AdminPrivateRoute from "./components/AdminPrivateRoute";
 import Profile from "./pages/Profile";
+import VerifyEmail from "./pages/VerifyEmail";
 import { ToastContainer } from "react-toastify";
 import Layout from "./components/layout/Layout";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Navigate to="/signup" />} />
         <Route element={<Nav />}>
           <Route path="/signup" element={<SignUp />} />
+          {/* <Route path="/verify-email" element={<VerifyEmail />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/admin/login" element={<AdminLogin />} />
         </Route>

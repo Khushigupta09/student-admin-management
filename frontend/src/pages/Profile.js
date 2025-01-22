@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import url from '../utils/appUrls';
 import { useNavigate } from 'react-router-dom';
+import { errorPopUp, succesPopUp } from '../utils/Toaster';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Fetch Student Profile
   useEffect(() => {
     const fetchProfile = async () => {
       const token = localStorage.getItem('studentToken');
 
       if (!token) {
-        alert('Please log in to access your profile.');
+        errorPopUp('Please log in to access your profile.');
         navigate('/login');
         return;
       }
@@ -27,11 +27,11 @@ const Profile = () => {
       } catch (error) {
         console.error('Error fetching profile:', error);
         if (error.response && error.response.status === 401) {
-          alert('Session expired. Please log in again.');
+          errorPopUp('Session expired. Please log in again.');
           localStorage.removeItem('studentToken');
           navigate('/login');
         } else {
-          alert('Failed to load profile. Please try again later.');
+          errorPopUp('Failed to load profile. Please try again later.');
         }
       } finally {
         setLoading(false);
@@ -41,7 +41,6 @@ const Profile = () => {
     fetchProfile();
   }, [navigate]);
 
-  // Soft Delete Profile
   const deleteProfile = async () => {
     const token = localStorage.getItem('studentToken');
 
@@ -51,13 +50,13 @@ const Profile = () => {
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        alert('Profile deleted successfully.');
+        succesPopUp('Profile deleted successfully.');
         localStorage.removeItem('studentToken');
         localStorage.removeItem('student');
         navigate('/signup');
       } catch (error) {
         console.error('Error deleting profile:', error);
-        alert('Failed to delete profile. Please try again later.');
+        errorPopUp('Failed to delete profile. Please try again later.');
       }
     }
   };
